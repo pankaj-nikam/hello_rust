@@ -34,4 +34,20 @@ fn main() {
 
     //We can also declare multiple discards.
     let _ = 999;
+
+    //Boolean in Rust is similar to that of C#.
+    let truth = true;
+    let falsity = false;
+
+    println!("{} {}", truth, falsity);
+
+    //We can evaluate expressions as we do in C#.
+
+    let is_three_greater_than_two = 3 > 2;
+    let is_four_smaller_than_five = 4 < 5;
+    println!("Is Three Greater Than Two? {}", is_three_greater_than_two);
+    println!("Is Four Smaller Than Five? {}", is_four_smaller_than_five);
+
+    //Since we are talking about booleans, it is same as in C#, && is logical AND, || is logical OR ! is NOT
+
 }
