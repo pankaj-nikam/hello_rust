@@ -50,4 +50,25 @@ fn main() {
 
     //Since we are talking about booleans, it is same as in C#, && is logical AND, || is logical OR ! is NOT
 
+    //Like var in C#, when we use let keyword to declare and initialize a variable, we have to stick to the type we initially declared.
+
+    let mut some_number = 1;
+    println!("{}", some_number);
+    some_number = 2;
+    // some_number = 33.33; //This results in error because when we declared it we assigned it to integer.
+
+    //We can assign some other number to the some number variable because its type is already declared.
+    //Yes the underscore prefix means that we wont be using the some_other_number variable.
+    let _some_other_number = some_number;
+
+    //Now dont get freaked out by the following line:
+    let some_number = 3.14
+
+    //Did you see what just happened above? Yes, we "re-declared" some_number. That is serious error in C#, however rust allows it.
+    //It is allowed because it is not overwritten however it is shadowed by the new one.
+
+    //Arithmetic operations are same as in C#. So no need to do it again here.
+    //Abbreviated forms are also allowed (+=, -=, *=, /=)
+
+    
 }
