@@ -36,4 +36,31 @@ fn main() {
         println!("{}", j);
         i += 1;
     }
+
+    //Let us see the for loop in Rust
+    println!("For Loop");
+    for i in 1..11 {
+        println!("{}", i * i);
+    }
+
+    //Following is an interesting case of shadowing
+
+    println!("Shadowing:");
+
+    let index = 8;
+
+    for index in 0..4 {
+        println!("{}", index);
+    }
+
+    println!("{}", index);
+
+    //Now guess the output of the following program:
+    let mut limit = 5;
+
+    for i in 1..limit {
+        limit -= 1;
+        println!("{}", i);
+    }
+    println!("{}", limit);
 }
