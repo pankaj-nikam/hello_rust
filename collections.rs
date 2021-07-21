@@ -48,5 +48,14 @@ fn main() {
     //Just as we have list in C#, we have vectors or vec in Rust which help us create dynamic collection
     let mut friends = vec!["Amit", "Snehal"];
     friends.push("Saurabh");
+    friends[0] = "Pankaj";
+    //This inserts it at 0th position.
+    friends.insert(0, "Krishna");
+    //This inserts to the last of the vector.
+    friends.push("Something");
+    //This removes the last item from vector
+    let popped_item = friends.pop();
+    println!("{:?}",popped_item);
     println!("{:?}", friends);
+
 }
