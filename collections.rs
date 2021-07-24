@@ -2,7 +2,10 @@ fn main() {
     //Arrays are similar in C#
     let sentence = ["This", "is", "a", "sentence"];
     //Arrays are also 0 based
-    println!("{} {} {} {}", sentence[0], sentence[1], sentence[2], sentence[3]);
+    println!(
+        "{} {} {} {}",
+        sentence[0], sentence[1], sentence[2], sentence[3]
+    );
     //We can also print array using the following syntax
     println!("{:?}", sentence);
     //We can pretty print using the following syntax
@@ -55,7 +58,29 @@ fn main() {
     friends.push("Something");
     //This removes the last item from vector
     let popped_item = friends.pop();
-    println!("{:?}",popped_item);
+    println!("{:?}", popped_item);
     println!("{:?}", friends);
 
+    //To declare empty arrays, we also need type. Following causes an error:
+    //let _a = [];
+
+    //We can get empty string array with the following syntax
+    let _a = [""; 0];
+
+    //Similarly vectors can be declared as we did array above.
+    let _b = vec![""; 0];
+
+    //Let us see how to copy arrays in Rust. Do note if we have to copy, the length of both arrays must be same.
+    let mut languages = ["French", "German", "Russian"];
+    let indian_languages = ["Marathi", "Hindi", "Sanskrit"];
+    println!("{:?}", languages);
+    languages = indian_languages;
+    println!("{:?}", languages);
+
+    //Different length vectors are allowed for copy however.
+    let mut languages = vec!["French", "German", "Russian"];
+    let indian_languages = vec!["Marathi", "Hindi", "Sanskrit", "Tamil", "Telugu"];
+    println!("{:?}", languages);
+    languages = indian_languages;
+    println!("{:?}", languages);
 }
