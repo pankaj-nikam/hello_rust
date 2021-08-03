@@ -65,7 +65,22 @@ fn main() {
     //However if the values change at runtime, it results into runtime exception.
     //It overflows in release mode and not compile mode.
     //Example:
-    let mut something_big: i8 = 1;
-    something_big += 127;
-    println!("The value of something big is {}", something_big);
+    // let mut something_big: i8 = 1;
+    // something_big += 127;
+    // println!("The value of something big is {}", something_big);
+
+    //Rust also has primitives like char and boolean as in C#
+    let first_character = 'a';
+    let is_sun_bigger_than_moon = true;
+    println!("The first character is '{}'", first_character);
+    println!("Is sun bigger than moon? {}", is_sun_bigger_than_moon);
+
+    //Rust supports unicode characters
+    let mu = 'µ';
+    println!("Mu is {}", mu);
+
+    //Let us loop over the numbers
+    for i in 0..256 {
+        println!("{}: [{}]", i, i as u8 as char);
+    }
 }
