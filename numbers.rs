@@ -83,4 +83,22 @@ fn main() {
     for i in 0..256 {
         println!("{}: [{}]", i, i as u8 as char);
     }
+
+    //There is no "void" type in Rust. The Empty Tuple indicates it is void.
+    let a = ();
+    println!("The void type: {:?}", a);
+
+    //Let us learn how to declare arrays with explicit type:
+    let my_int_array: [i32; 2] = [0, 1];
+    println!("The array contains {:?}", my_int_array);
+
+    //Similarly, we can declare vectors with explicit type:
+    let float_values: Vec<f32> = vec![3.14, 22.0, 7.0];
+    println!("The float vector contains {:?}", float_values);
+
+    //The array size must be known at compile time. We cannot declare a variable using let and assign array the size.
+    //However we can declare a constant using const keyword.
+    const N: usize = 20;
+    let _something = [0; N];
+    println!("The compile time array contains {:?}", _something);
 }
