@@ -16,6 +16,10 @@ fn print_double(mut num: f64) {
     println!("The double value is {}", num);
 }
 
+fn print_triple(num: f64) -> f64 {
+    num * 3.0
+}
+
 fn main() {
     fn something_else() {
         println!("Something else");
@@ -28,4 +32,5 @@ fn main() {
     let num = 10.0;
     print_double(num);
     println!("{}", num);
+    println!("{}", print_triple(3.14));
 }
