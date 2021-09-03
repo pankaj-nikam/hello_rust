@@ -11,6 +11,11 @@ fn add_two_numbers(num1: f64, num2: f64) {
     );
 }
 
+fn print_double(mut num: f64) {
+    num *= 2.0;
+    println!("The double value is {}", num);
+}
+
 fn main() {
     fn something_else() {
         println!("Something else");
@@ -20,4 +25,7 @@ fn main() {
     line();
     something_else();
     add_two_numbers(3.14, 2.22);
+    let num = 10.0;
+    print_double(num);
+    println!("{}", num);
 }
